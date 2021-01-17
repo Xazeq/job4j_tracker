@@ -12,6 +12,7 @@ public class Profession {
         this.surname = surname;
         this.education = education;
         this.birthday = birthday;
+        this.salary = salary;
     }
 
     public Profession(String name, String surname, String education) {
@@ -36,4 +37,6 @@ public class Profession {
     public int getBirthday() {
         return birthday;
     }
+
+    public double getSalary() {return salary;}
 }
