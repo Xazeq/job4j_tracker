@@ -19,26 +19,12 @@ public class TrackerTest {
         assertThat(result.getName(), is(item.getName()));
     }
 
-    /*@Test
-    public void findAllItems() {
-        Tracker tracker = new Tracker();
-        tracker.add(new Item());
-        tracker.add(new Item());
-        tracker.add(new Item());
-        Item[] items = tracker.findAll();
-        assertThat(3, is(items.length));
-        assertThat(1, is(items[0].getId()));
-        assertThat(2, is(items[1].getId()));
-        assertThat(3, is(items[2].getId()));
-    }*/
-
     @Test
     public void findAllItems() {
         Tracker tracker = new Tracker();
         tracker.add(new Item());
         tracker.add(new Item());
         tracker.add(new Item());
-        //Item[] items = tracker.findAll();
         List<Item> items = tracker.findAll();
         assertThat(3, is(items.size()));
         assertThat(1, is(items.get(0).getId()));
@@ -53,7 +39,6 @@ public class TrackerTest {
         tracker.add(new Item("task2"));
         tracker.add(new Item("task2"));
         tracker.add(new Item("task3"));
-        //Item[] items = tracker.findByName("task2");
         List<Item> items = tracker.findByName("task2");
         assertThat(2, is(items.size()));
         assertThat("task2", is(items.get(0).getName()));
