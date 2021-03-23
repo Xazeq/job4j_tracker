@@ -1,6 +1,9 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
@@ -16,7 +19,7 @@ public class TrackerTest {
         assertThat(result.getName(), is(item.getName()));
     }
 
-    @Test
+    /*@Test
     public void findAllItems() {
         Tracker tracker = new Tracker();
         tracker.add(new Item());
@@ -27,6 +30,20 @@ public class TrackerTest {
         assertThat(1, is(items[0].getId()));
         assertThat(2, is(items[1].getId()));
         assertThat(3, is(items[2].getId()));
+    }*/
+
+    @Test
+    public void findAllItems() {
+        Tracker tracker = new Tracker();
+        tracker.add(new Item());
+        tracker.add(new Item());
+        tracker.add(new Item());
+        //Item[] items = tracker.findAll();
+        List<Item> items = tracker.findAll();
+        assertThat(3, is(items.size()));
+        assertThat(1, is(items.get(0).getId()));
+        assertThat(2, is(items.get(1).getId()));
+        assertThat(3, is(items.get(2).getId()));
     }
 
     @Test
@@ -36,10 +53,11 @@ public class TrackerTest {
         tracker.add(new Item("task2"));
         tracker.add(new Item("task2"));
         tracker.add(new Item("task3"));
-        Item[] items = tracker.findByName("task2");
-        assertThat(2, is(items.length));
-        assertThat("task2", is(items[0].getName()));
-        assertThat("task2", is(items[1].getName()));
+        //Item[] items = tracker.findByName("task2");
+        List<Item> items = tracker.findByName("task2");
+        assertThat(2, is(items.size()));
+        assertThat("task2", is(items.get(0).getName()));
+        assertThat("task2", is(items.get(1).getName()));
     }
 
     @Test
