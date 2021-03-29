@@ -8,6 +8,6 @@ public class StringCompare {
                 return Character.compare(left.charAt(i), right.charAt(i));
             }
         }
-        return left.length() - right.length();
+        return Integer.compare(left.length(), right.length());
     }
 }
