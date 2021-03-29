@@ -1,6 +1,6 @@
 package ru.job4j.poly2;
 
-public class Airplane implements Vehicle{
+public class Airplane implements Vehicle {
     @Override
     public void move() {
         System.out.println("Самелет летит в воздухе");

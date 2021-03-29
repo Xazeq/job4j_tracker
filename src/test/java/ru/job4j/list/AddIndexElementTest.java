@@ -15,7 +15,7 @@ public class AddIndexElementTest {
         list.add("one");
         list.add("two");
         list.add("three");
-        boolean rsl = AddIndexElement.addNewElement(list,1, "four");
+        boolean rsl = AddIndexElement.addNewElement(list, 1, "four");
         assertThat(rsl, is(true));
     }
 
@@ -25,7 +25,7 @@ public class AddIndexElementTest {
         list.add("one");
         list.add("two");
         list.add("three");
-        boolean rsl = AddIndexElement.addNewElement(list,1, "two");
+        boolean rsl = AddIndexElement.addNewElement(list, 1, "two");
         assertThat(rsl, is(false));
     }
 }

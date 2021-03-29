@@ -13,7 +13,8 @@ public class Library {
         books[3] = fightClub;
         for (int index = 0; index < books.length; index++) {
             Book book = books[index];
-            System.out.println("Book \"" + book.getName() + "\" has " + book.getNumberPages() + " pages.");
+            System.out.println("Book \"" + book.getName()
+                    + "\" has " + book.getNumberPages() + " pages.");
         }
         Book tempBook = books[0];
         books[0] = books[3];
@@ -21,13 +22,15 @@ public class Library {
         System.out.println("Поменяны местами книги");
         for (int index = 0; index < books.length; index++) {
             Book book = books[index];
-            System.out.println("Book \"" + book.getName() + "\" has " + book.getNumberPages() + " pages.");
+            System.out.println("Book \"" + book.getName()
+                    + "\" has " + book.getNumberPages() + " pages.");
         }
         System.out.println("Вывод книги с именем \"Clean code\"");
         for (int index = 0; index < books.length; index++) {
             Book book = books[index];
             if (book.getName().equals("Clean code")) {
-                System.out.println("Book \"" + book.getName() + "\" has " + book.getNumberPages() + " pages.");
+                System.out.println("Book \"" + book.getName()
+                        + "\" has " + book.getNumberPages() + " pages.");
             }
         }
     }

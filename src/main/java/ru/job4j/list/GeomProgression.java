@@ -10,7 +10,7 @@ public class GeomProgression {
         list.add(first);
         for (int i = 1; i <= count; i++) {
             double temp = Math.pow(first * denominator, i - 1);
-            list.add((int)temp);
+            list.add((int) temp);
             sum += temp;
         }
         return sum;

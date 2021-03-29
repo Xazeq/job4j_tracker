@@ -16,7 +16,9 @@ public class Triangle {
     }
 
     public boolean exist(double ab, double ac, double bc) {
-        return first.distance(second) > 0 && second.distance(third) > 0 && first.distance(third) > 0;
+        return first.distance(second) > 0
+                && second.distance(third) > 0
+                && first.distance(third) > 0;
     }
 
     public double area() {

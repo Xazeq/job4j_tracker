@@ -38,5 +38,7 @@ public class Profession {
         return birthday;
     }
 
-    public double getSalary() {return salary;}
+    public double getSalary() {
+        return salary;
+    }
 }

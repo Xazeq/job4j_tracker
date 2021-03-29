@@ -8,6 +8,8 @@ public class College {
         student.setFullName("Иванов Иван Иванович");
         student.setGroup("ДКИ-401");
         student.setReceiptDate(new Date());
-        System.out.println(student.getFullName() + " зачислен в группу " + student.getGroup() + " с " + student.getReceiptDate());
+        System.out.println(student.getFullName()
+                + " зачислен в группу " + student.getGroup()
+                + " с " + student.getReceiptDate());
     }
 }
