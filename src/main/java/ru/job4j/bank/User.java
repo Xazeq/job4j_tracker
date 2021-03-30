@@ -2,8 +2,15 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает модель пользователя банка
+ * @author NIKITA SHEVELEV
+ * @version 1.0
+ */
 public class User {
+    /** Поле сожержит серию и номер пасспорта */
     private String passport;
+    /** Поле сожержит имя пользователя */
     private String username;
 
     public User(String passport, String username) {
