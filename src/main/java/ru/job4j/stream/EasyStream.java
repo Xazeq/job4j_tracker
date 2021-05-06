@@ -17,21 +17,21 @@ public class EasyStream {
     }
 
     public EasyStream map(Function<Integer, Integer> fun) {
-        EasyStream easyStream = new EasyStream(new ArrayList<>());
+        List<Integer> tmp = new ArrayList<>();
         for (var num : list) {
-            easyStream.list.add(fun.apply(num));
+            tmp.add(fun.apply(num));
         }
-        return easyStream;
+        return new EasyStream(tmp);
     }
 
     public EasyStream filter(Predicate<Integer> fun) {
-        EasyStream easyStream = new EasyStream(new ArrayList<>());
+        List<Integer> tmp = new ArrayList<>();
         for (var num : list) {
             if (fun.test(num)) {
-                easyStream.list.add(num);
+                tmp.add(num);
             }
         }
-        return easyStream;
+        return new EasyStream(tmp);
     }
 
     public List<Integer> collect() {
